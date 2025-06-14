@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranav Mohanan</title>
+
+  <!-- Font Awesome and Devicon for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <style>
+    body {
+      font-family: Calibri, sans-serif;
+      font-size: 12pt;
+      margin: 0;
+      padding: 0;
+      line-height: 1.4;
+    }
+
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: #6a5acd;
+      padding: 12px 10px;
+    }
+
+    .contact-box {
+      flex: 1;
+      color: white;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .buttons button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .buttons button:hover {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  .intro-bar {
+    display: flex;
+    align-items: flex-start; /* align top of image and text */
+    gap: 20px;               /* space between image and text */
+    padding: 20px 30px;
+    flex-wrap: nowrap;       /* keep on one line */
+  }
+
+  .intro-img img {
+    width: 160px;
+    height: 180px;
+    border-radius: 8px;
+    display: block;
+  }
+
+  #intro {
+    flex: 1;           /* take remaining horizontal space */
+    min-width: 250px;  /* don't get too small */
+  }
+
+  .descr {
+    text-align: justify;
+    color: black;
+    font-size: 12px;
+  }
+
+
+    .work {
+      text-align: justify;
+      font-size: 12px;
+      margin: 10px 30px;
+    }
+
+    .work li {
+      list-style-type: disc;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    .skillset-bar1, .skillset-bar2 {
+      display: flex;
+      gap: 20px;
+      justify-content: left;
+      margin-left: 20px;
+    }
+
+    .recomm-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin: 20px 0;
+    }
+
+    .square-box1 {
+      width: 220px;
+      min-height: 160px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      background-color: white;
+      padding: 12px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .square-box1 ul {
+      padding-left: 20px;
+      margin-top: 10px;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .floating-home-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+
+    .floating-home-button button {
+      background-color: #6a5acd;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .floating-home-button button:hover {
+      background-color: #5a4abc;
+    }
+
+    @media (max-width: 600px) {
+      .intro-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .buttons {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .recomm-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="contact-box">
+      <div class="name">Pranav Mohanan</div>
+      ✉️ pmnair96@gmail.com<br>
+      <i class="fas fa-phone" style="margin-right: 4px;"></i>+1 613 413 5616
+    </div>
+
+    <div class="buttons">
+      <button onclick="document.getElementById('intro').scrollIntoView({behavior: 'smooth'});">Summary</button>
+      <button onclick="document.getElementById('work-exp').scrollIntoView({behavior: 'smooth'});">Work Experience</button>
+      <button onclick="document.getElementById('education1').scrollIntoView({behavior: 'smooth'});">Education</button>
+      <button onclick="document.getElementById('recommendations').scrollIntoView({behavior:'smooth'});">Skills</button>
+    </div>
+  </div>
+
+ <div class="intro-bar">
+    <div class="intro-img">
+      <img src="https://pics.craiyon.com/2023-11-13/D1LA5ZNWQi6BZPqr-PlAFg.webp" alt="Profile Picture" />
+    </div>
+    <div id="intro">
+      <h1>Hi, I'm Pranav! <span style="font-size: 40px;">👋</span></h1>
+      <div class="descr">
+        Emerging AI Developer with nearly 4 years of experience as a Data Modeller, specializing in designing optimized data models to support enterprise reporting and analytics at the Canada Revenue Agency. Currently advancing expertise through on-the-job training in AI technologies, including Microsoft Azure, Python, Java (Quarkus), and Angular. Pursuing a Master’s in Artificial Intelligence, with a strong focus on delivering scalable, cloud-based AI solutions that drive operational excellence and support critical government initiatives.
+      </div>
+    </div>
+  </div>
+
+  <div id="work-exp">
+    <h2 style="margin-left: 30px;">Work Experience</h2>
+
+    <h3 style="margin-left: 30px;">AI Developer</h3>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 0 30px;">
+      <h4 style="margin: 0;">Canada Revenue Agency (CRA)</h4>
+      <h4 style="margin: 0;">April 2025 – Current</h4>
+    </div>
+
+    <div class="work">
+      <li>Contributed to the ongoing enhancement of an AI-powered chatbot built on Azure Machine Learning services, improving its accuracy, adaptability, and ability to handle diverse user intents.</li>
+      <li>Maintained and extended the Angular-based frontend and Java (Quarkus) backend, ensuring reliable communication between the user interface, backend APIs, and AI models.</li>
+      <li>Implemented retraining workflows and optimized model pipelines in Azure ML to support the chatbot's continuous learning from real-time user interactions and feedback loops.</li>
+      <li>Independently analyzed chatbot behavior and usage patterns to drive iterative improvements, improve natural language understanding, and align features with business needs.</li>
+    </div>
+
+    <h3 style="margin-left: 30px;">Data Modeller</h3>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 0 30px;">
+      <h4 style="margin: 0;">Canada Revenue Agency (CRA)</h4>
+      <h4 style="margin: 0;">July 2021 – April 2025</h4>
+    </div>
+
+    <div class="work">
+      <li>Designed and implemented Business Area Data Models (BADM) and Dimensional Models to support operational systems and enterprise reporting, ensuring data accuracy and integrity.</li>
+      <li>Utilized Erwin Data Modeler to develop and maintain metadata repositories, supporting data governance and standardization initiatives.</li>
+      <li>Analyzed and translated complex business requirements into scalable technical data models and IT solutions aligned with organizational objectives.</li>
+      <li>Collaborated with cross-functional teams to optimize data models for performance, enhancing data warehousing and business intelligence capabilities.</li>
+    </div>
+
+    <h3 style="margin-left: 30px;">Research Assistant</h3>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 0 30px;">
+      <h4 style="margin: 0;">Algonquin College</h4>
+      <h4 style="margin: 0;">May 2017 – Aug 2017</h4>
+    </div>
+
+    <div class="work">
+      <li>Conducted experimental research on Stimulated Brillouin Scattering (SBS) in optical fibers as part of the study <a href="https://opg.optica.org/ao/abstract.cfm?uri=ao-58-3-545">"Comparison of Different Schemes for Stimulated Brillouin Scattering Enhancement."</a></li>
+      <li>Investigated various enhancement techniques, including pump modulation and optical feedback, to improve Brillouin gain and lower threshold power in fiber systems.</li>
+      <li>Performed laboratory measurements and data analysis to evaluate SBS performance across different experimental configurations.</li>
+      <li>Co-authored and contributed to the successful publication of the research paper in Optica, a peer-reviewed journal by the Optica Publishing Group.</li>
+    </div>
+  </div>
+
+  <div class="education" id="education1">
+    <h2 style="margin-left: 30px;">Education</h2>
+    <h3 style="margin-left: 30px;">Master of Science in Artificial Intelligence</h3>
+    <h4 style="margin-left: 30px;">University of Ottawa, Ottawa, Canada</h4>
+    <h5 style="margin-left: 30px;">Expected Completion: 2027</h5>
+
+    <h3 style="margin-left: 30px;">Bachelor of Information Technology in Optical Systems and Sensors</h3>
+    <h4 style="margin-left: 30px;">Carleton University</h4>
+    <h5 style="margin-left: 30px;">Graduated: April 2021</h5>
+  </div>
+
+  <h2 style="color: black; margin-left: 30px;">Skills</h2>
+  <div class="recomm-bar" id="recommendations">
+    <div class="square-box1">
+      <strong>Technical Skills</strong>
+      <ul style="padding-left: 20px; margin-top: 10px; text-align: left; font-size: 12px;">
+        <li>Microsoft Azure (AI, ML)</li>
+        <li>Python (ML, scripting)</li>
+        <li>Java (Quarkus Framework)</li>
+        <li>Angular (Frontend)</li>
+        <li>Data Modeling (ERWin)</li>
+      </ul>
+    </div>
+
+    <div class="square-box1">
+      <strong>Soft Skills</strong>
+      <ul style="padding-left: 20px; margin-top: 10px; text-align: left; font-size: 12px;">
+        <li>Adaptability</li>
+        <li>Independent Learning</li>
+        <li>Analytical Thinking</li>
+        <li>Problem-Solving</li>
+        <li>Team Collaboration</li>
+      </ul>
+    </div>
+  </div>
+
+ <div class="floating-home-button">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});">🏠 Home</button>
+  </div>
+
+</body>
+</html>
